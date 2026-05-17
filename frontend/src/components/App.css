@@ -1,0 +1,17 @@
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  padding:10px 50px;
+  background:#203a43;
+}
+.navbar a {
+  color:#0ff;
+  text-decoration:none;
+  margin:0 10px;
+}
+.footer {
+  text-align:center;
+  padding:30px;
+  font-size:0.9rem;
+  background: rgba(0,0,0,0.3);
+}

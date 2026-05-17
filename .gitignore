@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.venv1/
+venv/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# Runtime data
+data/predictions/
+uploads/
+
+# Optional: large model files
+*.pt
+*.pth
+*.pkl
+*.joblib
+
+# 如果你的 scaler 文件不想上传，也保留这一行
+*.save

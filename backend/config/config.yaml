@@ -1,0 +1,7 @@
+database:
+  driver: postgresql
+  host: localhost
+  port: 5432
+  user: postgres
+  password: 20040330
+  dbname: db1

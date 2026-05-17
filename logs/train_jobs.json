@@ -1,0 +1,211 @@
+[
+  {
+    "job_id": "4c46f425a0ca",
+    "model_name": "pm25_lstm_new",
+    "model_key": "featured_warning_direct7",
+    "model_label": "预警导向特征增强LSTM",
+    "dataset_filenames": [
+      "长春净月潭-air-quality.csv",
+      "长春劳动公园-air-quality .csv",
+      "长春园林处-air-quality.csv",
+      "长春邮电学院-air-quality.csv",
+      "长春高新区管委会-air-quality.csv"
+    ],
+    "dataset_filename": "长春净月潭-air-quality.csv",
+    "dataset_count": 5,
+    "status": "terminated",
+    "created_at": "2026-05-17 20:17:00",
+    "started_at": "2026-05-17 20:17:00",
+    "finished_at": "2026-05-17 20:17:15",
+    "params": {
+      "epochs": 150,
+      "batch_size": 32,
+      "learning_rate": 0.0005,
+      "hidden_size": 128,
+      "num_layers": 2,
+      "dropout": 0.2,
+      "seq_length": 21,
+      "pred_days": 7,
+      "trend_loss_weight": 0.35,
+      "high_weight_factor": 3.0
+    },
+    "remark": "",
+    "log_file": "D:\\final program\\pythonProject12-V1\\logs\\train_4c46f425a0ca.log",
+    "metrics": {
+      "epoch": 2,
+      "loss": 0.079254,
+      "val_loss": 0.064133,
+      "rmse": 33.145747,
+      "mae": 25.269998,
+      "r2": 0.435662,
+      "lr": 0.0005,
+      "best_val_rmse": 33.145747
+    },
+    "score_summary": "RMSE=33.145747，MAE=25.269998，R²=0.435662，ValLoss=0.064133",
+    "return_code": null,
+    "error": null,
+    "message": "任务已被管理员终止"
+  },
+  {
+    "job_id": "1a6d1677e236",
+    "model_name": "预警导向特征增强LSTM-V3",
+    "model_key": "featured_warning_direct7",
+    "model_label": "预警导向特征增强LSTM",
+    "dataset_filenames": [
+      "长春净月潭-air-quality.csv",
+      "长春劳动公园-air-quality .csv",
+      "长春园林处-air-quality.csv",
+      "长春邮电学院-air-quality.csv",
+      "长春高新区管委会-air-quality.csv"
+    ],
+    "dataset_filename": "长春净月潭-air-quality.csv",
+    "dataset_count": 5,
+    "status": "failed",
+    "created_at": "2026-05-15 23:09:23",
+    "started_at": "2026-05-15 23:09:23",
+    "finished_at": "2026-05-15 23:12:31",
+    "params": {
+      "epochs": 200,
+      "batch_size": 32,
+      "learning_rate": 0.0003,
+      "hidden_size": 128,
+      "num_layers": 2,
+      "dropout": 0.25,
+      "seq_length": 21,
+      "pred_days": 7,
+      "trend_loss_weight": 0.35,
+      "high_weight_factor": 3.0
+    },
+    "remark": "",
+    "log_file": "D:\\final program\\pythonProject12\\logs\\train_1a6d1677e236.log",
+    "metrics": {
+      "epoch": 8,
+      "total_epoch": 200,
+      "loss": 0.072316,
+      "val_loss": 0.063859,
+      "rmse": 34.335362,
+      "mae": 26.157286,
+      "r2": 0.394427,
+      "lr": 0.0003,
+      "best_val_rmse": 32.893959
+    },
+    "score_summary": "RMSE=34.335362，MAE=26.157286，R²=0.394427，ValLoss=0.063859",
+    "return_code": {
+      "raw": 1,
+      "signed": 1,
+      "hex": "0x00000001"
+    },
+    "error": "训练脚本返回错误码：1 (0x00000001)",
+    "message": "任务已被管理员终止"
+  },
+  {
+    "job_id": "6d9b4f9e9684",
+    "model_name": "预警导向特征增强LSTM-V2",
+    "model_key": "featured_direct7",
+    "model_label": "特征增强LSTM",
+    "dataset_filenames": [
+      "长春净月潭-air-quality.csv",
+      "长春劳动公园-air-quality .csv",
+      "长春园林处-air-quality.csv",
+      "长春邮电学院-air-quality.csv",
+      "长春高新区管委会-air-quality.csv"
+    ],
+    "dataset_filename": "长春净月潭-air-quality.csv",
+    "dataset_count": 5,
+    "status": "finished",
+    "created_at": "2026-05-15 17:34:39",
+    "started_at": "2026-05-15 17:34:39",
+    "finished_at": "2026-05-15 17:38:02",
+    "params": {
+      "epochs": 150,
+      "batch_size": 32,
+      "learning_rate": 0.0005,
+      "hidden_size": 128,
+      "num_layers": 2,
+      "dropout": 0.2,
+      "seq_length": 21,
+      "pred_days": 7,
+      "trend_loss_weight": 0.35,
+      "high_weight_factor": 3.0
+    },
+    "remark": "",
+    "log_file": "D:\\final program\\pythonProject12\\logs\\train_6d9b4f9e9684.log",
+    "metrics": {
+      "epoch": 50,
+      "loss": 0.192564,
+      "val_loss": 0.222796,
+      "rmse": 36.235315,
+      "mae": 25.907484,
+      "r2": 0.325554,
+      "lr": 3.1e-05,
+      "test_rmse": 32.027205,
+      "test_mae": 23.747894,
+      "test_r2": 0.47817,
+      "baseline_rmse": 43.488888,
+      "baseline_mae": 32.005788,
+      "best_val_rmse": 32.088911
+    },
+    "score_summary": "Test RMSE=32.027205，Test MAE=23.747894，Test R²=0.47817",
+    "return_code": {
+      "raw": 3221226505,
+      "signed": -1073740791,
+      "hex": "0xC0000409"
+    },
+    "error": null,
+    "message": "训练完成"
+  },
+  {
+    "job_id": "82cc8532b149",
+    "model_name": "pm25_lstm_new",
+    "model_key": "featured_direct7",
+    "model_label": "特征增强LSTM",
+    "dataset_filenames": [
+      "长春净月潭-air-quality.csv",
+      "长春劳动公园-air-quality .csv",
+      "长春园林处-air-quality.csv",
+      "长春邮电学院-air-quality.csv",
+      "长春高新区管委会-air-quality.csv"
+    ],
+    "dataset_filename": "长春净月潭-air-quality.csv",
+    "dataset_count": 5,
+    "status": "finished",
+    "created_at": "2026-05-15 17:16:17",
+    "started_at": "2026-05-15 17:16:17",
+    "finished_at": "2026-05-15 17:19:21",
+    "params": {
+      "epochs": 150,
+      "batch_size": 32,
+      "learning_rate": 0.0005,
+      "hidden_size": 128,
+      "num_layers": 2,
+      "dropout": 0.2,
+      "seq_length": 21,
+      "pred_days": 7
+    },
+    "remark": "",
+    "log_file": "D:\\final program\\pythonProject12\\logs\\train_82cc8532b149.log",
+    "metrics": {
+      "epoch": 58,
+      "loss": 0.07712,
+      "val_loss": 0.100284,
+      "rmse": 35.890251,
+      "mae": 25.940268,
+      "r2": 0.338338,
+      "lr": 3.1e-05,
+      "test_rmse": 32.514091,
+      "test_mae": 23.644066,
+      "test_r2": 0.462184,
+      "baseline_rmse": 43.488888,
+      "baseline_mae": 32.005788,
+      "best_val_rmse": 31.809398
+    },
+    "score_summary": "Test RMSE=32.514091，Test MAE=23.644066，Test R²=0.462184",
+    "return_code": {
+      "raw": 3221226505,
+      "signed": -1073740791,
+      "hex": "0xC0000409"
+    },
+    "error": null,
+    "message": "训练完成"
+  }
+]

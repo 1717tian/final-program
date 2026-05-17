@@ -1,0 +1,141 @@
+/* 全局样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ------------------ 背景图 ------------------ */
+.home-container {
+    background-image: url('./fox-background.jpg'); /* 背景图路径 */
+    background-size: cover;     /* 拉伸铺满屏幕 */
+    background-position: center center;
+    background-attachment: fixed; /* 固定不随滚动 */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------------ 顶部导航栏 ------------------ */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 左右两端 */
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #00f0ff;
+    font-size: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 1.5rem; /* 横向间距 */
+}
+
+.navbar .nav-links a {
+    color: #00f0ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ------------------ 英雄区 ------------------ */
+.hero-section {
+    margin-top: 80px; /* 留出导航栏高度 */
+    text-align: center;
+    color: #fff;
+    padding: 120px 20px 60px 20px;
+    text-shadow: 0px 0px 10px rgba(0,255,255,0.7);
+}
+
+.hero-buttons button {
+    margin: 0 1rem;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #1e90ff, #0099ff);
+    color: white;
+}
+
+/* ------------------ 功能概览 ------------------ */
+.features-section {
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    min-height: 150px;
+}
+
+/* ------------------ 登录注册框 ------------------ */
+.auth-box {
+    max-width: 400px;
+    margin: 120px auto 60px auto;
+    background-color: rgba(0,0,0,0.7);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+.auth-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg,#1e90ff,#0099ff);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.auth-box .switch-link {
+    margin-top: 10px;
+    display: block;
+    color: #00f0ff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* ------------------ 页脚 ------------------ */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #00f0ff;
+    background-color: rgba(0,0,0,0.6);
+}
