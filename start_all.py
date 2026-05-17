@@ -1709,11 +1709,68 @@ except Exception as exc:
             self.root.destroy()
 
 
+def get_resource_path(filename: str) -> Path:
+    """
+    兼容普通 Python 运行和 PyInstaller 打包运行。
+    """
+    candidates = []
+
+    if getattr(sys, "frozen", False):
+        # PyInstaller --onefile 解压后的临时目录
+        candidates.append(Path(getattr(sys, "_MEIPASS", "")) / filename)
+        # exe 所在目录
+        candidates.append(Path(sys.executable).resolve().parent / filename)
+
+    # 项目根目录
+    candidates.append(PROJECT_ROOT / filename)
+
+    # start_all.py 所在目录
+    try:
+        candidates.append(Path(__file__).resolve().parent / filename)
+    except Exception:
+        pass
+
+    for path in candidates:
+        if path and path.exists():
+            return path
+
+    return PROJECT_ROOT / filename
+
+
+def set_windows_app_id():
+    """
+    让 Windows 任务栏使用当前程序自己的图标，而不是默认 Tk 图标。
+    """
+    if os.name == "nt":
+        try:
+            import ctypes
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+                "TianYuDong.PM25.WarningPlatform.Launcher"
+            )
+        except Exception:
+            pass
+
+
+def apply_window_icon(root):
+    icon_path = get_resource_path("icon_fox.ico")
+
+    if icon_path.exists():
+        try:
+            root.iconbitmap(default=str(icon_path))
+        except Exception:
+            pass
+
+
 def main():
+    set_windows_app_id()
+
     root = tk.Tk()
+    apply_window_icon(root)
 
     try:
         app = TechLauncher(root)
+        apply_window_icon(root)
+
         app.log("启动器已就绪。", "OK")
         app.log("首次部署建议：点击“依赖检查”，根据弹窗安装缺失依赖。", "SYSTEM")
         app.log("依赖就绪后：填写数据库配置 → 保存配置 → 验证数据库 → 启动全部。", "SYSTEM")
